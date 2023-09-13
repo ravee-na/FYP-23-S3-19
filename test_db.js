@@ -1,9 +1,13 @@
-const db = require('./db_connection.js'); // Assuming your database connection is in a separate file
+// testing retrieval of data
 
-db.query('SELECT * FROM employer;')
-  .then(([rows, fields]) => {
-    console.log('Query result:', rows);
-  })
-  .catch((err) => {
-    console.error('Error executing query:', err);
-  });
+const db = require('./db_connection.js'); // Adjust the path to your db.js file
+
+// Example query
+db.query('SELECT * FROM employer', (err, results) => {
+  if (err) {
+    console.error('Error executing query: ' + err);
+    return;
+  }
+  console.log('Query results:', results);
+});
+

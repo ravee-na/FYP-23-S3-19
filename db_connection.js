@@ -36,3 +36,6 @@ connection.connect((err) => {
     });
   });
 });
+
+// export the database connection so that we can use it throughout the webapp
+module.exports = connection;
