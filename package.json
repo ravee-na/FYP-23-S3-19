@@ -1,5 +1,12 @@
 {
   "dependencies": {
-    "mysql2": "^3.6.1"
+    "@fullcalendar/daygrid": "^6.1.8",
+    "@fullcalendar/react": "^6.1.8",
+    "bootstrap": "^5.3.1",
+    "fullcalendar": "^6.1.8",
+    "mysql2": "^3.6.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-dom": "^18.2.0"
   }
 }
