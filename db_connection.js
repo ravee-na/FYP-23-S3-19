@@ -14,28 +14,7 @@ connection.connect((err) => {
     console.error('Error connecting to the database:', err);
     return;
   }
-
-  console.log('Connected to the database.');
-
-  // Perform a simple query (e.g., selecting version)
-  connection.query('SELECT VERSION() as version', (queryErr, results) => {
-    if (queryErr) {
-      console.error('Error executing query:', queryErr);
-      return;
-    }
-
-    console.log('Database version:', results[0].version);
-
-    // Close the database connection
-    connection.end((endErr) => {
-      if (endErr) {
-        console.error('Error closing the database connection:', endErr);
-      } else {
-        console.log('Database connection closed.');
-      }
-    });
-  });
+  console.log('Connected to the database.'); 
 });
-
 // export the database connection so that we can use it throughout the webapp
 module.exports = connection;
