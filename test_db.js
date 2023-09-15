@@ -2,8 +2,8 @@
 const db = require('./db_connection.js'); //extend the exported db connection from db_connection.js
 
 // Example query
-function retrieveEmployer(){
-  db.query('SELECT * FROM employer', (err, results) => {
+function retrieveEmployee(){
+  db.query('SELECT * FROM employee', (err, results) => {
     if (err) {
       console.error('Error executing query: ' + err);
       return;
@@ -22,7 +22,7 @@ function closeConnection(){
   });
 }
 
-retrieveEmployer();
+retrieveEmployee();
 closeConnection();
 
 
