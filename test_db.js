@@ -1,28 +1,14 @@
-// testing retrieval of data
-const db = require('./db_connection.js'); //extend the exported db connection from db_connection.js
+// main.js
 
-// Example query
-function retrieveEmployee(){
-  db.query('SELECT * FROM employee', (err, results) => {
-    if (err) {
-      console.error('Error executing query: ' + err);
-      return;
-    }
-    console.log('Query results:', results);
-  });
+const Employee = require('./employee');
+
+async function fetchEmployees() {
+  try {
+    const employees = await Employee.getAllEmployees();
+    console.log(employees);
+  } catch (error) {
+    console.error('Error fetching employees:', error);
+  }
 }
 
-function closeConnection(){
-  db.end((endErr) => {
-    if (endErr) {
-      console.error('Error closing the database connection:', endErr);
-    } else {
-      console.log('Database connection closed.');
-    }
-  });
-}
-
-retrieveEmployee();
-closeConnection();
-
-
+fetchEmployees();
