@@ -13,6 +13,7 @@ class Employee {
     this.emp_psw = password;
   }
 
+  // implement needed methods here
   // Static method to retrieve employees from the database
   static async getAllEmployees() {
     const connection = await mysql.createConnection({
