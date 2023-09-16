@@ -1,10 +1,10 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = new Sequelize({
   dialect: 'mysql',
-  host: 'your-mysql-host',
-  username: 'your-mysql-username',
-  password: 'your-mysql-password',
-  database: 'your-database-name',
+  host: 3306,
+  username: 'root',
+  password: 'FYP-S3-23-19',
+  database: 'emproster',
 });
 
 const Employee = sequelize.define('Employee', {
