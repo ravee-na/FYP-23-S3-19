@@ -4,6 +4,7 @@ const mysql = require('mysql2/promise');
 class Employee {
     //class constructor
   constructor(id, name, address, phoneNumber, emergencyContact, email, password) {
+    this.emp_id = id;
     this.emp_name = name;
     this.emp_address = address;
     this.emp_phoneno = phoneNumber;
