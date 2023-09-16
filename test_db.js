@@ -1,14 +1,14 @@
 // main.js
 
-const Employee = require('./employee');
+const Manager = require('./manager');
 
-async function fetchEmployees() {
+async function fetchManagers() {
   try {
-    const employees = await Employee.getAllEmployees();
-    console.log(employees);
+    const managers = await Manager.getAllManagers();
+    console.log(managers);
   } catch (error) {
-    console.error('Error fetching employees:', error);
+    console.error('Error fetching managers:', error);
   }
 }
 
-fetchEmployees();
+fetchManagers();
