@@ -30,6 +30,7 @@ class Employee {
       connection.end();
     }
   }
+  
 }
 
 //export the entity class

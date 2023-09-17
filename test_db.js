@@ -1,14 +1,14 @@
 // main.js
 
-const Manager = require('./manager');
+const Shift = require('./shift');
 
-async function fetchManagers() {
+async function fetchShifts() {
   try {
-    const managers = await Manager.getAllManagers();
-    console.log(managers);
+    const shifts = await Shift.getDutyDate();
+    console.log(shifts);
   } catch (error) {
     console.error('Error fetching managers:', error);
   }
 }
 
-fetchManagers();
+fetchShifts();
